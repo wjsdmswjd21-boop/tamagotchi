@@ -13,7 +13,7 @@ import {
   INFANT_TO_TEEN_FEEDS, INFANT_TO_TEEN_PLAYS, TEEN_TO_ADULT_FEEDS, TEEN_TO_ADULT_PLAYS,
   FamilyData, saveFamilyData, loadFamilyData,
   isNightTime, calcMood, getMoodSpeech,
-  BABY_TO_ADULT_FEEDS, BABY_TO_ADULT_PLAYS, BABY_TO_ADULT_SECONDS,
+  BABY_TO_ADULT_FEEDS, BABY_TO_ADULT_PLAYS,
 } from './gameState';
 import {
   Genome, Phenotype, FamilyMember,
