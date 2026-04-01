@@ -496,7 +496,7 @@ export default function TamagotchiGame() {
             const hints: string[] = [];
             if (p.headpiece !== 'none') hints.push(p.headpiece === 'crown' ? '👑' : p.headpiece === 'ribbon' ? '🎀' : p.headpiece === 'horn' ? '🦄' : '🌸');
             if (p.earType !== 'none') hints.push(p.earType === 'bunny' ? '🐰' : p.earType === 'cat' ? '🐱' : '🐻');
-            if (p.special !== 'none') hints.push(p.special === 'wings' ? '🪽' : p.special === 'glasses' ? '🤓' : '🐾');
+
             ctx.fillStyle = '#555';
             ctx.font = '9px sans-serif';
             ctx.textAlign = 'center';
