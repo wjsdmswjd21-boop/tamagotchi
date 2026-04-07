@@ -58,8 +58,6 @@ export const TEEN_TO_ADULT_PLAYS = 3;
 // 레거시 호환
 export const BABY_TO_ADULT_FEEDS = 5;
 export const BABY_TO_ADULT_PLAYS = 3;
-export const TEEN_TO_ADULT_FEEDS = 5;
-export const TEEN_TO_ADULT_PLAYS = 3;
 
 const SAVE_KEY = 'tamagotchi_save';
 const FAMILY_KEY = 'tamagotchi_family';
