@@ -13,7 +13,7 @@ import {
   INFANT_TO_TEEN_FEEDS, INFANT_TO_TEEN_PLAYS, TEEN_TO_ADULT_FEEDS, TEEN_TO_ADULT_PLAYS,
   FamilyData, saveFamilyData, loadFamilyData,
   isNightTime, calcMood, getMoodSpeech,
-  BABY_TO_ADULT_FEEDS, BABY_TO_ADULT_PLAYS,
+  infant_TO_ADULT_FEEDS, infant_TO_ADULT_PLAYS,
 } from './gameState';
 import {
   Genome, Phenotype, FamilyMember,
@@ -722,7 +722,7 @@ export default function TamagotchiGame() {
                       const cPheno = getPhenotype(cGenome);
                       setChildGenome(cGenome);
                       setChildPhenotype(cPheno);
-                      childLayerRef.current = buildCharacterLayers(cPheno, 'baby');
+                      childLayerRef.current = buildCharacterLayers(cPheno, 'infant');
                       setTimeout(() => {
                         setBreedPhase('result');
                         breedPhaseRef.current = 'result';
@@ -805,7 +805,7 @@ export default function TamagotchiGame() {
         setGrowthStage('infant');
         setIsDead(false);
         setGeneration(newGen);
-        // animCache를 먼저 baby로 교체한 후 메인으로 전환
+        // animCache를 먼저 infant로 교체한 후 메인으로 전환
         rebuildAnimCache(childGenome, 'infant');
         animCacheRef.current = buildAnimationFrames(getPhenotype(childGenome), 'infant');
         saveState(s);
@@ -1005,7 +1005,7 @@ export default function TamagotchiGame() {
     if (s.phase !== 'alive' || !s.genome) return;
 
     // 아기 상태면 교배 불가
-    if (s.growthStage === 'baby') {
+    if (s.growthStage === 'infant') {
       s.speechBubble = '아직 아기예요! 🍼';
       s.speechTimer = 100;
       setSpeechBubble('아직 아기예요! 🍼');
