@@ -194,7 +194,7 @@ export function createRandomGenome(): Genome {
   const charType = gender === 'female'
     ? randomFrom(femaleChars)
     : randomFrom(maleChars);
-  return createSanrioGenome(charType, gender);
+  return createSanrioGenome(charType as 'kitty'|'melody'|'kuromi'|'purin'|'takoyaki'|'ninja'|'sheep'|'cherry'|'sushi'|'icecream'|'robot', gender);
 }
 
 export function express(gene: Gene): string {
