@@ -189,8 +189,8 @@ export function createSanrioGenome(charType: 'kitty'|'melody'|'kuromi'|'purin'|'
 // 랜덤 1세대 생성 (성별에 따라 캐릭터 배정)
 export function createRandomGenome(): Genome {
   const gender = Math.random() < 0.5 ? 'female' : 'male';
-  const femaleChars = ['kitty', 'melody', 'kuromi', 'sheep', 'cherry', 'icecream'] as const;
-  const maleChars   = ['purin', 'takoyaki', 'ninja', 'sushi', 'robot'] as const;
+  const femaleChars = ['kitty', 'melody', 'kuromi', 'sheep', 'cherry', 'icecream'];
+  const maleChars   = ['purin', 'takoyaki', 'ninja', 'sushi', 'robot'];
   const charType = gender === 'female'
     ? randomFrom(femaleChars)
     : randomFrom(maleChars);
