@@ -207,4 +207,3 @@ export function loadFamilyData(): FamilyData {
     return { members: [], discoveredTraits: [] };
   }
 }
-Commit changes 
