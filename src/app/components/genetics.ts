@@ -177,7 +177,7 @@ function randomFrom<T>(arr: T[]): T {
 }
 
 // 1세대 산리오 캐릭터 생성
-export function createSanrioGenome(charType: 'kitty'|'melody'|'kuromi'|'purin'|'takoyaki', gender: 'female'|'male'): Genome {
+export function createSanrioGenome(charType: 'kitty'|'melody'|'kuromi'|'purin'|'takoyaki'|'ninja'|'sheep'|'cherry'|'sushi'|'icecream'|'robot', gender: 'female'|'male'): Genome {
   const preset = SANRIO_PRESETS[charType];
   return {
     ...(preset as Omit<Genome, 'gender'|'baseChar'>),
